@@ -6,6 +6,9 @@ import Feature from './Feature'
 import Services from './Services'
 import Contact from './Contact'
 import Loading from './Loading'
+import Product from './Product'
+import Stars from './Stars'
+import ProductImages from './ProductImages'
 
 export {
     Feature,
@@ -16,4 +19,7 @@ export {
     Contact,
     Loading,
     PageHero,
+    Product,
+    Stars,
+    ProductImages
 }

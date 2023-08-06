@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Footer, Navbar } from "./components"
-import { About, Error, Home, Product, SingleProduct } from "./pages"
+import { About, Error, Home, Products, SingleProduct } from "./pages"
 
 const App = () => {
   return (
@@ -9,8 +9,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="product" element={<Product />} />
-        <Route path="product/:id" element={<SingleProduct />} />
+        <Route path="products" element={<Products />} />
+        <Route path="products/:id" element={<SingleProduct />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

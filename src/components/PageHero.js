@@ -6,13 +6,14 @@ const PageHero = ({ title, product }) => {
         <div className="bg-sec mt-8 pl-16 p-8 w-full min-h-[10vh] flex items-center">
             <h3 className="font-normal text-[24px] text-lgt">
                 <Link to='/' className="text-drk ">
-                    Home <tab/>
+                    Home <tab />
                 </Link>
-                / {title}
+
                 {product &&
                     <Link to='/products' className="text-drk">
-                        / Products
+                        / Products <tab/>
                     </Link>}
+                / {title}
             </h3>
         </div>
     )

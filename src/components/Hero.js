@@ -18,7 +18,7 @@ const Hero = () => {
                     aperiam odio ducimus, obcaecati libero et quia tempora excepturi quis
                     alias?
                 </p>
-                <Link to='product' className=''>
+                <Link to='products'>
                     <button className="capitalize text-drk bg-lgt hover:bg-pri hover:text-lgt rounded-lg border border-drk p-4">
                         Shop Now
                     </button>

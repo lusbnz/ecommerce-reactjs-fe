@@ -1,5 +1,5 @@
 import Home from './Home'
-import Product from './Product'
+import Products from './Products'
 import SingleProduct from './SingleProduct'
 import About from './About'
 import Error from './Error'
@@ -9,5 +9,5 @@ export {
     SingleProduct,
     About,
     Error,
-    Product,
+    Products,
 }

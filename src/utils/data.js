@@ -16,8 +16,8 @@ export const links = [
     },
     {
         id: 3,
-        text: 'Product',
-        url: '/product',
+        text: 'Products',
+        url: '/products',
     },
 ]
 
@@ -45,6 +45,6 @@ export const services = [
     },
 ]
 
-export const products_url = 'https://course-api.com/react-store-products'
+export const product_url = 'https://course-api.com/react-store-products'
 
 export const single_product_url = `https://course-api.com/react-store-single-product?id=`

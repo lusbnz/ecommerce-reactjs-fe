@@ -2,15 +2,15 @@ import React from "react";
 import { PageHero } from "../components"
 
 
-const Product = () => {
+const Products = () => {
     return (
         <div>
             <PageHero title='Product'/>
             <div>
-                Product
+                Products
             </div>
         </div>
     )
 }
 
-export default Product
+export default Products

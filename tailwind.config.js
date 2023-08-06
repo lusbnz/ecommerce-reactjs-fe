@@ -22,6 +22,10 @@ module.exports = {
         'lgt': '#ffffff',
       },
 
+      gridTemplateColumns: {
+        'auto': 'repeat(auto-fit, minmax(360px, 1fr))'
+      }
+
       // h1: {
       //   'font-bold text-[32px]'
       // },
