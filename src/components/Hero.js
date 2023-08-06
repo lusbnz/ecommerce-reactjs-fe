@@ -6,7 +6,7 @@ import hero2 from "../assests/hero2.webp"
 const Hero = () => {
     return (
         <div className="p-8 min-h-[60vh] grid grid-cols-1 place-items-center lg:h-screen lg:grid-cols-2 gap-32">
-            <article className="content text-center border rounded-lg py-8">
+            <article className="content text-center border border-drk rounded-lg py-8">
                 <h1 className="lg:mb-8 font-bold text-[32px]">
                     Design your
                     <br />
@@ -19,7 +19,9 @@ const Hero = () => {
                     alias?
                 </p>
                 <Link to='product' className=''>
-                    Shop now
+                    <button className="capitalize text-drk bg-lgt hover:bg-pri hover:text-lgt rounded-lg border border-drk p-4">
+                        Shop Now
+                    </button>
                 </Link>
             </article>
             <article className="image block relative before:absolute before:w-[10%] before:h-[80%] before:bg-hvr before:bottom-0  before:left-[-8%] before:rounded-lg">

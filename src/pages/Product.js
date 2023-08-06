@@ -5,7 +5,7 @@ import { PageHero } from "../components"
 const Product = () => {
     return (
         <div>
-            <PageHero text='Product'/>
+            <PageHero title='Product'/>
             <div>
                 Product
             </div>

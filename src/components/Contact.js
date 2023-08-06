@@ -10,7 +10,7 @@ const Contact = () => {
                     sint unde quaerat ratione soluta veniam provident adipisci cumque
                     eveniet tempore?
                 </p>
-                <form className="contact w-[90vw] max-w-[500px] grid grid-cols-2">
+                <form className="contact w-auto max-w-[500px] grid grid-cols-2">
                     <input
                         type='email'
                         className='input border border-drk p-4 border-r-none text-sec rounded-l-lg placeholder:text-drk placeholder:capitalize'

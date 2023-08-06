@@ -5,7 +5,7 @@ const Services = ()=> {
     return (
         <div className="py-20 bg-sec">
             <article className="header text-center lg:grid lg:grid-cols-1">
-                <h3 className="mb-8 font-semibold text-[24px] text-pri">
+                <h3 className="mb-8 font-semibold text-[32px] text-pri">
                 Custom furniture <br /> Built only for you
                 </h3>
                 <p className="font-light text-[12px] mb-0 text-drk">

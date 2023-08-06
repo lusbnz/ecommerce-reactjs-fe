@@ -5,7 +5,7 @@ import aboutImg from "../assests/about.webp"
 const About = () => {
     return (
         <div>
-            <PageHero text='About'/>
+            <PageHero title='About'/>
             <div className="grid gap-16 p-8 lg:grid-cols-1">
                 <img src={aboutImg} alt="about" className="w-full h-[500px] block object-cover rounded-lg"/>
                 <article className="flex flex-col items-center">
