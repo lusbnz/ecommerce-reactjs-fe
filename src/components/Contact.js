@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
     return (
         <div className="py-20 px-8">
-            <h3 className="text-drk">Join our newsletter and get 20% off</h3>
+            <h3 className="text-drk font-semibold text-[24px]">Join our newsletter and get 20% off</h3>
             <div className="content md:grid md:grid-cols-2">
                 <p className="text-sec p-2">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
