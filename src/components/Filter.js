@@ -63,7 +63,7 @@ const Filter = () => {
                         })}
                     </select>
                 </div>
-                <div className='form-control mb-2 md:mb-6 grid grid-cols-3 md:grid-cols-1 place-items-start items-center'>
+                <div className='form-control mb-2 md:mb-6 grid grid-cols-2 md:grid-cols-1 place-items-start items-center'>
                     <h4 className="mb-2 font-semibold text-[16px] md:text-[24px] text-drk">Price</h4>
                     <p className='price mb-1'>{formatPrice(price)}</p>
                     <input

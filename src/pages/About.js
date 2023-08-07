@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PageHero } from "../components"
 import aboutImg from "../assests/about.webp"
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const About = () => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, [])
     return (
         <div>
             <PageHero title='About'/>
             <div className="grid gap-16 p-8 place-items-center grid-cols-1">
-                <img src={aboutImg} alt="about" className="w-[80%] h-[500px] block object-cover rounded-lg"/>
+                <img src={aboutImg} data-aos='zoom-in' alt="about" className="w-[80%] h-[500px] block object-cover rounded-lg"/>
                 <article className="flex flex-col items-center">
                     <h2 className="text-center font-semibold text-[24px] text-pri">
                         Our Story
