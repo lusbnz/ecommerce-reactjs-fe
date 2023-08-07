@@ -6,7 +6,6 @@ import { formatPrice } from "../utils/tool";
 import { useProductsContext } from "../contexts/products_context";
 import { single_product_url as url } from "../utils/data"
 
-
 const SingleProduct = () => {
     const { id } = useParams()
     const navigate = useNavigate()
@@ -38,29 +37,29 @@ const SingleProduct = () => {
     return (
         <div>
             <PageHero title={name} product />
-            <div>
+            <div className="p-8">
                 <Link to='/products'>
-                    <button>
+                    <button className="capitalize text-drk bg-lgt hover:bg-pri hover:text-lgt rounded-lg border border-drk p-4">
                         Back to products
                     </button>
                 </Link>
-                <div className="product">
+                <div className="product grid gap-16 mt-8 lg:grid-cols-1 lg:items-center">
                     <ProductImages images={images} />
                     <div className="content">
-                        <h2>{name}</h2>
-                        <Stars stars={stars} reviews={reviews} />
-                        <h5 className="price">{formatPrice(price)}</h5>
-                        <p className="desc">{description}</p>
-                        <p className="info">
-                            <span>Available :</span>
+                        <h2 className="font-semibold text-[24px] text-pri">{name}</h2>
+                        <Stars stars={stars} reviews={reviews}/>
+                        <h5 className="price text-pri font-normal text-[16px]">{formatPrice(price)}</h5>
+                        <p className="desc font-light text-[12px] text-drk w-[80%]">{description}</p>
+                        <p className="info capitalize w-[300px] flex">
+                            <span className="font-semibold w-[100px]">Available :</span>
                             {stock > 0 ? 'In stock' : 'Out of stock'}
                         </p>
-                        <p className="info">
-                            <span>SKU: </span>
+                        <p className="info capitalize w-[300px] flex">
+                            <span className="font-semibold w-[100px]">SKU: </span>
                             {sku}
                         </p>
-                        <p className="info">
-                            <span>Brand: </span>
+                        <p className="info capitalize w-[300px] flex">
+                            <span className="font-semibold w-[100px]">Brand: </span>
                             {company}
                         </p>
                     </div>

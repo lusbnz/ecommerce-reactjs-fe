@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import icon from "../utils/icon";
 import { formatPrice } from "../utils/tool"
-
-const { FaSearch } = icon
 
 const Product = ({ image, name, price, id }) => {
     return (

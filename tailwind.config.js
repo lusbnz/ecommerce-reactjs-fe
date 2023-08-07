@@ -23,8 +23,11 @@ module.exports = {
       },
 
       gridTemplateColumns: {
-        'auto': 'repeat(auto-fit, minmax(360px, 1fr))'
-      }
+        'auto': 'repeat(auto-fit, minmax(360px, 1fr))',
+        '300': '300px 1fr',
+        '3xauto': 'auto auto 1fr auto',
+        '2xauto': 'auto 1fr',
+      },
 
       // h1: {
       //   'font-bold text-[32px]'
