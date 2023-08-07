@@ -22,7 +22,7 @@ const Filter = () => {
                         value={text}
                         placeholder="search"
                         onChange={updateFilters}
-                        className="input p-2 bg-sec rounded-xl border border-none text-lgt placeholder:text-lgt placeholder:capitalize"
+                        className="input p-2 bg-sec rounded-xl w-[80%] text-lgt placeholder:text-lgt placeholder:capitalize"
                     />
                 </div>
                 <div className="form-control mb-2 md:mb-6">

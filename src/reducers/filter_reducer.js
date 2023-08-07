@@ -34,25 +34,11 @@ const filter_reducer = (state, action) => {
         let tempProducts = []
         if (sort === 'price-lowest') {
             tempProducts = filtered_products.sort((a, b) => {
-                // if (a.price < b.price) {
-                //   return -1
-                // }
-                // if (a.price > b.price) {
-                //   return 1
-                // }
-                // return 0
                 return a.price - b.price
             })
         }
         if (sort === 'price-highest') {
             tempProducts = filtered_products.sort((a, b) => {
-                // if (b.price < a.price) {
-                //   return -1
-                // }
-                // if (b.price > a.price) {
-                //   return 1
-                // }
-                // return 0
                 return b.price - a.price
             })
         }

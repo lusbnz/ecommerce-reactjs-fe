@@ -7,7 +7,7 @@ const Products = () => {
     return (
         <div>
             <PageHero title='Product' />
-            <div className="page grid gap-y-12 gap-x-6 my-4 p-8 mx-auto md:grid-cols-300">
+            <div className="page grid gap-y-12 gap-x-6 my-4 p-8 mx-auto md:grid-cols-200 lg:grid-cols-300">
                 <Filter />
                 <div>
                     <Sort />

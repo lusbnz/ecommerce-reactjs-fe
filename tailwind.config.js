@@ -25,22 +25,10 @@ module.exports = {
       gridTemplateColumns: {
         'auto': 'repeat(auto-fit, minmax(360px, 1fr))',
         '300': '300px 1fr',
+        '200': '200px 1fr',
         '3xauto': 'auto auto 1fr auto',
         '2xauto': 'auto 1fr',
       },
-
-      // h1: {
-      //   'font-bold text-[32px]'
-      // },
-      // h2: {
-      //   'font-semibold text-[24px]'
-      // },
-      // h3: {
-      //   'font-normal text-[16px]'
-      // },
-      // p: {
-      //   'font-light text-[12px]'
-      // },
     },
   },
   plugins: [],
