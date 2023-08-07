@@ -10,8 +10,8 @@ const Product = ({ image, name, price, id }) => {
                     <img src={image} alt={name} className="h-[200px] w-[200px] md:h-[400px] md:w-[400px] object-cover block rounded-xl hover:opacity-50" />
                 </Link>
             </div>
-            <div className="mt-4 flex flex-col justify-center items-start mb-0 text-lgt p-2">
-                <h3 className="font-normal text-[16px]">{name}</h3>
+            <div className="mt-4 flex flex-col justify-center items-start mb-0 text-drk p-2 ">
+                <h3 className="font-semibold text-[16px]">{name}</h3>
                 <p>{formatPrice(price)}</p>
             </div>
         </div>

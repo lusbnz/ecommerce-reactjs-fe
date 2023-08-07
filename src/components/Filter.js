@@ -36,7 +36,7 @@ const Filter = () => {
                                     type="button"
                                     name="category"
                                     className={
-                                        `${category === c.toLowerCase() ? 'min-w-[40px] border border-pri p-1' : 'min-w-[40px] p-1'
+                                        `${category === c.toLowerCase() ? 'min-w-[40px] border border-pri p-1' : 'min-w-[40px] p-1 border boder-sec'
                                         }`
                                     }
                                 >
@@ -46,7 +46,7 @@ const Filter = () => {
                         })}
                     </div>
                 </div>
-                <div className="form-control mb-2 md:mb-6">
+                <div className="form-control mb-2 md:mb-6 grid grid-cols-2 md:grid-cols-1 place-items-start items-center">
                     <h4 className="mb-2 font-semibold text-[16px] md:text-[24px] text-drk">Commpany</h4>
                     <select
                         name="company"
@@ -63,8 +63,8 @@ const Filter = () => {
                         })}
                     </select>
                 </div>
-                <div className='form-control mb-2 md:mb-6'>
-                    <h4 className="mb-2 font-semibold text-[16px] md:text-[24px] text-drk">price</h4>
+                <div className='form-control mb-2 md:mb-6 grid grid-cols-3 md:grid-cols-1 place-items-start items-center'>
+                    <h4 className="mb-2 font-semibold text-[16px] md:text-[24px] text-drk">Price</h4>
                     <p className='price mb-1'>{formatPrice(price)}</p>
                     <input
                         type='range'
@@ -76,7 +76,7 @@ const Filter = () => {
                         className="bg-sec cursor-pointer rounded-lg"
                     />
                 </div>
-                <div className='form-control shipping grid grid-cols-2 items-center capitalize mb-2 md:mb-6'>
+                <div className='form-control shipping grid grid-cols-2 place-items-start items-center capitalize mb-2 md:mb-6'>
                     <label htmlFor='shipping'>free shipping</label>
                     <input
                         type='checkbox'
@@ -87,7 +87,7 @@ const Filter = () => {
                     />
                 </div>
             </form >
-            <button type='button' className='clear-button capitalize text-drk bg-lgt hover:bg-pri hover:text-lgt rounded-lg border border-drk p-4' onClick={clearFilters}>
+            <button type='button' className='clear-button capitalize text-drk bg-lgt hover:bg-pri hover:text-lgt rounded-lg border border-drk px-4 py-2' onClick={clearFilters}>
                 clear filters
             </button>
         </div >

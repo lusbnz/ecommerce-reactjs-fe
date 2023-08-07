@@ -8,7 +8,7 @@ const Services = ()=> {
                 <h3 className="mb-8 font-semibold text-[32px] text-lgt">
                 Custom furniture <br /> Built only for you
                 </h3>
-                <p className="font-light text-[12px] mb-0 text-drk">
+                <p className="font-light text-[12px] md:text-[16px] mb-0 text-drk">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
             dolorum debitis consectetur reprehenderit non aliquam voluptates
             dolore aut vero consequuntur.
@@ -18,8 +18,8 @@ const Services = ()=> {
                 {services.map((item)=>(
                     <article className="service bg-hvr rounded-lg text-center p-8" key={item.id}>
                         <span className="icon mx-auto place-items-center grid mb-4 rounded-full text-lgt">{item.icon}</span>
-                        <h4 className="font-semibold text-[16px] text-drk">{item.title}</h4>
-                        <p className="font-light text-[12px] mb-0 text-sec">{item.text}</p>
+                        <h4 className="font-semibold text-[20px] text-drk">{item.title}</h4>
+                        <p className="font-light text-[14px] mb-0 text-sec">{item.text}</p>
                     </article>
                 ))}
             </div>

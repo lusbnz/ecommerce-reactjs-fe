@@ -21,7 +21,7 @@ const Stars = ({ stars, reviews }) => {
     })
 
     return (
-        <div classname="mb-2 ">
+        <div classname="mb-2">
             <div classname="star">{tmpStars}</div>
             <p classname="reviews ml-2 mb-0">({reviews} Customer reviews)</p>
         </div>
