@@ -21,7 +21,7 @@ const Feature = () => {
             <div className="title font-semibold text-[24px] text-lgt">
                 <h2>Featured products</h2>
             </div>
-            <div className="featured my-8 p-2 mx-auto grid gap-8 place-items-center md:grid-cols-auto">
+            <div className="featured my-8 p-2 mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {featured.slice(0, 3).map((product) => {
                     return <Product key={product.id} {...product} />
                 })}

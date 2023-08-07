@@ -12,7 +12,7 @@ const About = () => {
                     <h2 className="text-center font-semibold text-[24px] text-pri">
                         Our Story
                     </h2>
-                    <p className="mt-8 mx-auto max-w-[80%] font-light text-[12px] text-sec">
+                    <p className="mt-8 mx-auto max-w-[80%] font-light text-[12px] text-drk">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
                         accusantium sapiente tempora sed dolore esse deserunt eaque
                         excepturi, delectus error accusamus vel eligendi, omnis beatae.

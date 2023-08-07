@@ -18,9 +18,9 @@ const Listview = ({ products }) => {
                         <div>
                             <h4 className="mb-2 font-normal text-[16px] text-drk">{product.name}</h4>
                             <h5 className='price mb-2 text-pri font-normal text-[14px]'>{formatPrice(product.price)}</h5>
-                            <p className="max-w-[80%] font-light text-[12px] text-drk">{product.description.substring(0, 150)}...</p>
+                            <p className="max-w-[80%] font-light text-[12px] text-drk pb-4">{product.description.substring(0, 150)}...</p>
                             <Link to={`/Products/${product.id}`}>
-                                <button className="capitalize text-drk bg-lgt hover:bg-pri hover:text-lgt rounded-lg border border-drk p-4">
+                                <button className="capitalize text-drk bg-lgt hover:bg-pri hover:text-lgt rounded-lg border border-drk py-2 px-4">
                                     Details
                                 </button>
                             </Link>

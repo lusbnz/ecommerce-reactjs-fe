@@ -15,7 +15,7 @@ const Filter = () => {
     return (
         <div className="content">
             <form onSubmit={(e) => e.preventDefault()}>
-                <div className="form-control mb-6">
+                <div className="form-control mb-2 md:mb-6">
                     <input
                         type="text"
                         name="text"
@@ -25,8 +25,8 @@ const Filter = () => {
                         className="input p-2 bg-sec rounded-xl border border-none text-lgt placeholder:text-lgt placeholder:capitalize"
                     />
                 </div>
-                <div className="form-control mb-6">
-                    <h4 className="mb-2 font-semibold text-[24px] text-drk">Category</h4>
+                <div className="form-control mb-2 md:mb-6">
+                    <h4 className="mb-2 font-semibold text-[16px] md:text-[24px] text-drk">Category</h4>
                     <div>
                         {categories.map((c, index) => {
                             return (
@@ -46,8 +46,8 @@ const Filter = () => {
                         })}
                     </div>
                 </div>
-                <div className="form-control mb-6">
-                    <h4 className="mb-2 font-semibold text-[24px] text-drk">Commpany</h4>
+                <div className="form-control mb-2 md:mb-6">
+                    <h4 className="mb-2 font-semibold text-[16px] md:text-[24px] text-drk">Commpany</h4>
                     <select
                         name="company"
                         value={company}
@@ -63,8 +63,8 @@ const Filter = () => {
                         })}
                     </select>
                 </div>
-                <div className='form-control mb-6'>
-                    <h4 className="mb-2 font-semibold text-[24px] text-drk">price</h4>
+                <div className='form-control mb-2 md:mb-6'>
+                    <h4 className="mb-2 font-semibold text-[16px] md:text-[24px] text-drk">price</h4>
                     <p className='price mb-1'>{formatPrice(price)}</p>
                     <input
                         type='range'
@@ -76,7 +76,7 @@ const Filter = () => {
                         className="bg-sec cursor-pointer rounded-lg"
                     />
                 </div>
-                <div className='form-control shipping grid grid-cols-2 items-center capitalize mb-6'>
+                <div className='form-control shipping grid grid-cols-2 items-center capitalize mb-2 md:mb-6'>
                     <label htmlFor='shipping'>free shipping</label>
                     <input
                         type='checkbox'

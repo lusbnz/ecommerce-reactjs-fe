@@ -7,7 +7,7 @@ const Product = ({ image, name, price, id }) => {
         <div className="relative rounded-lg items-center">
             <div>
                 <Link to={`/products/${id}`} className="link">
-                    <img src={image} alt={name} className="h-[400px] w-[400px] object-cover block rounded-xl hover:opacity-50" />
+                    <img src={image} alt={name} className="h-[200px] w-[200px] md:h-[400px] md:w-[400px] object-cover block rounded-xl hover:opacity-50" />
                 </Link>
             </div>
             <div className="mt-4 flex justify-between items-center mb-0 text-lgt p-2">

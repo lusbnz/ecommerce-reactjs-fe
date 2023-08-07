@@ -5,7 +5,7 @@ const ProductImages = ({ images = [[]] }) => {
     return (
         <div className="h-full grid place-items-center">
             <img src={main.url} alt="product" className="main h-[500px] w-[500px] object-cover rounded-lg block" />
-            <div className="gallery mt-4 grid grid-cols-5 gap-4 mx-auto w-[80%]">
+            <div className="gallery mt-4 grid grid-cols-5 gap-1 lg:gap-4 mx-auto w-full lg:w-[80%]">
                 {images.map((image, index) => {
                     return (
                         <img

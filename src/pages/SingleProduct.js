@@ -43,7 +43,7 @@ const SingleProduct = () => {
                         Back to products
                     </button>
                 </Link>
-                <div className="product grid gap-16 mt-8 lg:grid-cols-1 lg:items-center">
+                <div className="product grid gap-16 mt-8 grid-cols-1 items-center">
                     <ProductImages images={images} />
                     <div className="content">
                         <h2 className="font-semibold text-[24px] text-pri">{name}</h2>
