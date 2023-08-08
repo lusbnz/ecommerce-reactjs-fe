@@ -16,7 +16,7 @@ const Hero = () => {
                     <br />
                     comfort zone
                 </h1>
-                <p data-aos='fade-right' className="mb-8 mx-auto max-w-[80%] font-light text-[12px] lg:text-[14px] text-sec">
+                <p data-aos='fade-right' className="mb-8 mx-auto max-w-[80%] font-semibold text-[12px] lg:text-[14px] text-pri">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at
                     sed omnis corporis doloremque possimus velit! Repudiandae nisi odit,
                     aperiam odio ducimus, obcaecati libero et quia tempora excepturi quis

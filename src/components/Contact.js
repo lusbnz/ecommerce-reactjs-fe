@@ -10,7 +10,7 @@ const Contact = () => {
         <div className="py-20 px-8">
             <h3 data-aos='fade-down' className="text-drk font-semibold text-[24px]">Join our newsletter and get 20% off</h3>
             <div className="content md:grid md:grid-cols-2">
-                <p data-aos='fade-right' className="text-sec p-2">
+                <p data-aos='fade-right' className="text-pri font-semibold p-2">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
                     sint unde quaerat ratione soluta veniam provident adipisci cumque
                     eveniet tempore?
