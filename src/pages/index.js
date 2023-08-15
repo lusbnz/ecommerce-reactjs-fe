@@ -1,13 +1,17 @@
 import Home from './Home'
-import Products from './Products'
-import SingleProduct from './SingleProduct'
 import About from './About'
+import Products from './Products'
+import Cart from './Cart'
+import Login from './Login'
+import SingleProduct from './SingleProduct'
 import Error from './Error'
 
 export {
     Home,
-    SingleProduct,
     About,
-    Error,
     Products,
+    Cart,
+    Login,
+    SingleProduct,
+    Error,
 }

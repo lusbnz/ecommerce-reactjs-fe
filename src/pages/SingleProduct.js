@@ -1,72 +1,85 @@
-import React, { useEffect } from "react";
-import { Loading, PageHero, ProductImages, Stars } from "../components"
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { Error } from "../pages"
-import { formatPrice } from "../utils/tool";
-import { useProductsContext } from "../contexts/products_context";
-import { single_product_url as url } from "../utils/data"
+import React, { useEffect } from 'react'
+import { Loading, PageHero, ProductImages, Stars, AddToCart } from '../components'
+import { Error } from '../pages'
+import { useProductsContext } from '../contexts/products_context'
+import { single_products_url as url } from '../utils/constant'
+import { formatPrice } from '../utils/helper'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 
 const SingleProduct = () => {
-    const { id } = useParams()
-    const navigate = useNavigate()
-    const {
-        single_product_loading: loading,
-        single_product_error: error,
-        single_product: product,
-        fetchSingleProduct,
-    } = useProductsContext();
-    useEffect(() => {
-        fetchSingleProduct(`${url}${id}`);
-    }, [id]);
-    useEffect(() => {
-        if (error) {
-            setTimeout(() => {
-                navigate('/');
-            }, 3000);
-        }
-    }, [error]);
-    if (loading) {
-        return <Loading />;
-    }
+  const { id } = useParams()
+  const navigate = useNavigate()
+  const {
+    single_product_loading: loading,
+    single_product_error: error,
+    single_product: product,
+    fetchSingleProduct,
+  } = useProductsContext()
+
+  useEffect(() => {
+    fetchSingleProduct(`${url}${id}`)
+  }, [id])
+
+  useEffect(() => {
     if (error) {
-        return <Error />;
+      setTimeout(() => {
+        navigate('/')
+      }, 3000)
     }
-    const {
-        name, price, description, stock, stars, reviews, id: sku, company, images,
-    } = product
-    return (
-        <div>
-            <PageHero title={name} product />
-            <div className="p-8">
-                <Link to='/products'>
-                    <button className="capitalize text-drk bg-lgt hover:bg-pri hover:text-lgt rounded-lg border border-drk p-4">
-                        Back to products
-                    </button>
-                </Link>
-                <div className="product grid gap-16 mt-8 grid-cols-1 items-center">
-                    <ProductImages images={images} />
-                    <div className="content">
-                        <h2 className="font-semibold text-[24px] text-pri">{name}</h2>
-                        <Stars stars={stars} reviews={reviews}/>
-                        <h5 className="price text-pri font-normal text-[16px]">{formatPrice(price)}</h5>
-                        <p className="desc font-light text-[12px] text-drk w-[80%] md:w-[50%]">{description}</p>
-                        <p className="info capitalize w-[300px] flex">
-                            <span className="font-semibold w-[100px]">Available :</span>
-                            {stock > 0 ? 'In stock' : 'Out of stock'}
-                        </p>
-                        <p className="info capitalize w-[300px] flex">
-                            <span className="font-semibold w-[100px]">SKU: </span>
-                            {sku}
-                        </p>
-                        <p className="info capitalize w-[300px] flex">
-                            <span className="font-semibold w-[100px]">Brand: </span>
-                            {company}
-                        </p>
-                    </div>
-                </div>
-            </div>
+  }, [error])
+
+  if (loading) {
+    return <Loading />
+  }
+  if (error) {
+    return <Error />
+  }
+
+  const {
+    name,
+    price,
+    description,
+    stock,
+    stars,
+    reviews,
+    id: sku,
+    company,
+    images,
+  } = product
+
+  return (
+    <div>
+      <PageHero title='Products' product={name} />
+      <div className='md:p-12 lg:p-24'>
+        <Link to='/products' className='btn btn-ghost'>
+          Back to products
+        </Link>
+        <div className='pt-12 grid grid-cols-1 lg:grid-cols-2'>
+          <ProductImages images={images} />
+          <div className='content p-8'>
+            <h2 className="text-4xl md:text-6xl font-semibold">{name}</h2>
+            <Stars stars={stars} reviews={reviews} />
+            <h4 className='text-md md:text-xl lg:pt-6 font-semibold'>{formatPrice(price)}</h4>
+            <p className="py-2 text-sm md:text-md w-full mx-auto px-4">{description}</p>
+            <p className="py-2 text-sm md:text-md w-full mx-auto px-4">
+              <span className='font-semibold'>Available: </span>
+              {stock > 0 ? 'In stock' : 'Out of stock'}
+            </p>
+            <p className="py-2 text-sm md:text-md w-full mx-auto px-4">
+              <span className='font-semibold'>SKU: </span>
+              {sku}
+            </p>
+            <p className="py-2 text-sm md:text-md w-full mx-auto px-4">
+              <span className='font-semibold'>Brand: </span>
+              {company}
+            </p>
+            <hr/>
+            {stock > 0 && <AddToCart product={product}/>}
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default SingleProduct

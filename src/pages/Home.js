@@ -1,15 +1,15 @@
-import React from "react";
-import { Contact, Feature, Hero, Services } from "../components"
+import React from 'react'
+import {Hero, Contact, Feature, Services } from '../components'
 
 const Home = () => {
-    return (
-        <div>
-            <Hero />
-            <Feature />
-            <Services />
-            <Contact />
-        </div>
-    )
+  return (
+    <div>
+      <Hero />
+      <Feature />
+      <Services />
+      <Contact />
+    </div>
+  )
 }
 
 export default Home

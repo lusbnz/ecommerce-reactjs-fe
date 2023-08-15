@@ -1,21 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { formatPrice } from "../utils/tool"
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { formatPrice} from '../utils/helper'
 
-const Product = ({ image, name, price, id }) => {
-    return (
-        <div className="relative rounded-lg items-center">
-            <div>
-                <Link to={`/products/${id}`} className="link">
-                    <img src={image} alt={name} className="h-[200px] w-[200px] md:h-[400px] md:w-[400px] object-cover block rounded-xl hover:opacity-50" />
-                </Link>
-            </div>
-            <div className="mt-4 flex flex-col justify-center items-start mb-0 text-drk p-2 ">
-                <h3 className="font-semibold text-[16px]">{name}</h3>
-                <p>{formatPrice(price)}</p>
-            </div>
-        </div>
-    )
+const Product = ({image, name, price, id}) => {
+  return (
+    <div className='pt-12 pb-6 px-6'>
+      <Link to={`/products/${id}`}>
+      <img src={image} alt={image} className='h-[225px] w-full object-cover block rounded-xl hover:opacity-70 hover:shadow-lg cursor-pointer'/>
+      </Link>
+      <div className='md:flex justify-between items-center py-4 hidden'>
+        <h4 className='text-md md:text-xl'>{name}</h4>
+        <p className="text-sm md:text-md">{formatPrice(price)}</p>
+      </div>
+    </div>
+  )
 }
 
 export default Product

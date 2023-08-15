@@ -1,21 +1,19 @@
-import React from "react";
-import { PageHero, Sort } from "../components"
-import { Filter, ProductLists } from "../components";
-
+import React from 'react'
+import { Filters, PageHero, ProductList, Sort } from '../components'
 
 const Products = () => {
-    return (
+  return (
+    <>
+      <PageHero title='Products'/>
+      <div className='products grid grid-cols-1 md:grid-cols-200 gap-4 md:p-12 lg:p-24'>
+        <Filters />
         <div>
-            <PageHero title='Product' />
-            <div className="page grid gap-y-12 gap-x-6 my-4 p-8 mx-auto md:grid-cols-200 lg:grid-cols-300">
-                <Filter />
-                <div>
-                    <Sort />
-                    <ProductLists />
-                </div>
-            </div>
+          <Sort/>
+          <ProductList/>
         </div>
-    )
+      </div>
+    </>
+  )
 }
 
 export default Products

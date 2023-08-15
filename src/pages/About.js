@@ -1,38 +1,37 @@
-import React, { useEffect } from "react";
-import { PageHero } from "../components"
-import aboutImg from "../assests/about.webp"
-import Aos from "aos";
-import 'aos/dist/aos.css'
+import React from 'react'
+import aboutImg from '../assets/about.jpeg'
+import { Link } from 'react-router-dom'
+import { PageHero } from '../components'
 
 const About = () => {
-    useEffect(() => {
-        Aos.init({ duration: 2000 })
-    }, [])
-    return (
-        <div>
-            <PageHero title='About'/>
-            <div className="grid gap-16 p-8 place-items-center grid-cols-1">
-                <img src={aboutImg} data-aos='zoom-in' alt="about" className="w-[80%] h-[500px] block object-cover rounded-lg"/>
-                <article className="flex flex-col items-center">
-                    <h2 className="text-center font-semibold text-[24px] text-pri">
-                        Our Story
-                    </h2>
-                    <p className="mt-8 mx-auto w-[80%] lg:max-w-[60%] font-light text-[16px] text-drk">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-                        accusantium sapiente tempora sed dolore esse deserunt eaque
-                        excepturi, delectus error accusamus vel eligendi, omnis beatae.
-                        Quisquam, dicta. Eos quod quisquam esse recusandae vitae neque
-                        dolore, obcaecati incidunt sequi blanditiis est exercitationem
-                        molestiae delectus saepe odio eligendi modi porro eaque in libero
-                        minus unde sapiente consectetur architecto. Ullam rerum, nemo iste
-                        ex, eaque perspiciatis nisi, eum totam velit saepe sed quos
-                        similique amet. Ex, voluptate accusamus nesciunt totam vitae esse
-                        iste.
-                    </p>
-                </article>
-            </div>
+  return (
+    <>
+      <PageHero title='About'/>
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col lg:flex-row">
+          <img src={aboutImg} className="max-w-[250px] md:max-w-md rounded-lg shadow-2xl" />
+          <div className='text-center lg:text-start grid place-items-center lg:place-items-start'>
+            <h2 className="text-4xl md:text-6xl font-semibold">Our Story</h2>
+            <p className="py-6 text-sm md:text-md max-w-[80%] lg:max-w-full">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+              accusantium sapiente tempora sed dolore esse deserunt eaque
+              excepturi, delectus error accusamus vel eligendi, omnis beatae.
+              Quisquam, dicta. Eos quod quisquam esse recusandae vitae neque
+              dolore, obcaecati incidunt sequi blanditiis est exercitationem
+              molestiae delectus saepe odio eligendi modi porro eaque in libero
+              minus unde sapiente consectetur architecto. Ullam rerum, nemo iste
+              ex, eaque perspiciatis nisi, eum totam velit saepe sed quos
+              similique amet. Ex, voluptate accusamus nesciunt totam vitae esse
+              iste.
+            </p>
+            <Link to='/products' className='btn btn-neutral'>
+              Find your item
+            </Link>
+          </div>
         </div>
-    )
+      </div>
+    </>
+  )
 }
 
 export default About

@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react'
 
 const Loading = () => {
-    return (
-        <div className="h-screen flex items-center justify-center">
-            Loading...
-        </div>
-    )
+  return (
+    <span className="loading loading-spinner loading-lg"></span>
+  )
 }
 
 export default Loading

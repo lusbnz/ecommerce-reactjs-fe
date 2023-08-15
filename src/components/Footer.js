@@ -1,19 +1,14 @@
-import React from "react";
+import React from 'react'
 
 const Footer = () => {
-    return (
-        <div className="flex flex-col gap-1 lg:flex-row h-20 justify-center items-center icon bg-drk text-center">
-            <span className="font-light text-[12px] text-sec">
-                &copy; {new Date().getFullYear()}
-                <tab/>
-                <span className="font-bold text-pri"> Quoc Viet </span>
-            </span>
-            
-            <span className="font-light text-[12px] text-sec">
-                All rights reserved
-            </span>
-        </div>
-    )
+  return (
+    <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+      <div className='flex flex-col md:flex-row gap-2'>
+        <p>Copyright © 2023</p>
+        <p>All right reserved by qviet</p>
+      </div>
+    </footer>
+  )
 }
 
 export default Footer

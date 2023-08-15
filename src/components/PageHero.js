@@ -1,22 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const PageHero = ({ title, product }) => {
-    return (
-        <div className="bg-sec mt-8 pl-16 p-8 w-full min-h-[10vh] flex items-center">
-            <h3 className="font-normal text-[24px] text-lgt">
-                <Link to='/' className="text-drk ">
-                    Home <tab />
-                </Link>
-
-                {product &&
-                    <Link to='/products' className="text-drk">
-                        / Products <tab/>
-                    </Link>}
-                / {title}
-            </h3>
-        </div>
-    )
+  return (
+    <div className='p-12 bg-base-200 text-sm breadcrumbs'>
+      <ul>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to={`/${title}`}>{title}</Link></li>
+        <li>{product}</li>
+      </ul>
+    </div>
+  )
 }
 
 export default PageHero
